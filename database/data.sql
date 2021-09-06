@@ -1,78 +1,42 @@
--- phpMyAdmin SQL Dump
--- version 4.8.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Nov 03, 2020 at 06:56 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.39
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+CREATE DATABASE IF NOT EXISTS elms CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `elms`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
+/*---------admin-----------*/
+CREATE TABLE IF NOT EXISTS admin(
+ 	  `id` int(11) NOT NULL,
   `UserName` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
   `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)CHARACTER SET utf8 COLLATE utf8_general_ci;
 
---
 -- Dumping data for table `admin`
---
-
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2020-11-03 05:55:30');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `tbldepartments`
---
-
-CREATE TABLE `tbldepartments` (
+/*--------tbldepartments-----------*/
+CREATE TABLE IF NOT EXISTS tbldepartments(
   `id` int(11) NOT NULL,
   `DepartmentName` varchar(150) DEFAULT NULL,
   `DepartmentShortName` varchar(100) NOT NULL,
   `DepartmentCode` varchar(50) DEFAULT NULL,
   `CreationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)CHARACTER SET utf8 COLLATE utf8_general_ci;
 
---
--- Dumping data for table `tbldepartments`
---
 
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
 (1, 'Human Resource', 'HR', 'HR001', '2017-11-01 07:16:25'),
 (2, 'Information Technology', 'IT', 'IT001', '2017-11-01 07:19:37'),
 (3, 'Operations', 'OP', 'OP1', '2017-12-02 21:28:56');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `tblemployees`
---
-
-CREATE TABLE `tblemployees` (
-  `id` int(11) NOT NULL,
+/*----------tblemployees----------*/
+CREATE TABLE IF NOT EXISTS tblemployees(
+ `id` int(11) NOT NULL,
   `EmpId` varchar(100) NOT NULL,
   `FirstName` varchar(150) NOT NULL,
   `LastName` varchar(150) NOT NULL,
@@ -87,23 +51,17 @@ CREATE TABLE `tblemployees` (
   `Phonenumber` char(11) NOT NULL,
   `Status` int(1) NOT NULL,
   `RegDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)CHARACTER SET utf8 COLLATE utf8_general_ci;
 
---
+
 -- Dumping data for table `tblemployees`
---
-
 INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
 (1, 'EMP10806121', 'Janobe', 'Sourcecode', 'janobe@janobe.com', '36d59e2369f00c4d9f336acf4408bae9', 'Male', '3 February, 1990', 'Human Resource', 'N NEPO', 'NEPO', 'IRE', '9857555555', 1, '2017-11-10 11:29:59'),
 (2, 'DEMP2132', 'James', 'doe', 'james@gmail.com', 'f925916e2754e5e03f75dd58a5733251', 'Male', '3 February, 1990', 'Information Technology', 'N NEPO', 'NEPO', 'IRE', '8587944255', 1, '2017-11-10 13:40:02');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `tblleaves`
---
-
-CREATE TABLE `tblleaves` (
+/*-------------tblleaves-----------*/
+CREATE TABLE IF NOT EXISTS tblleaves(
   `id` int(11) NOT NULL,
   `LeaveType` varchar(110) NOT NULL,
   `ToDate` varchar(120) NOT NULL,
@@ -115,9 +73,8 @@ CREATE TABLE `tblleaves` (
   `Status` int(1) NOT NULL,
   `IsRead` int(1) NOT NULL,
   `empid` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)CHARACTER SET utf8 COLLATE utf8_general_ci;
 
---
 -- Dumping data for table `tblleaves`
 --
 
@@ -129,20 +86,13 @@ INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`,
 (11, 'Casual Leave', '22/02/2022', '22/02/2022', 'sad', '2020-11-03 05:20:58', NULL, NULL, 0, 0, 1),
 (12, 'Casual Leave', '22/02/2022', '22/02/2022', 'sad', '2020-11-03 05:52:49', NULL, NULL, 0, 0, 1);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tblleavetype`
---
-
-CREATE TABLE `tblleavetype` (
+/*-------------tblleavetype-----------*/
+CREATE TABLE IF NOT EXISTS tblleavetype(
   `id` int(11) NOT NULL,
   `LeaveType` varchar(200) DEFAULT NULL,
   `Description` mediumtext,
   `CreationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
+)CHARACTER SET utf8 COLLATE utf8_general_ci;
 -- Dumping data for table `tblleavetype`
 --
 
@@ -151,11 +101,6 @@ INSERT INTO `tblleavetype` (`id`, `LeaveType`, `Description`, `CreationDate`) VA
 (2, 'Medical Leave test', 'Medical Leave  test', '2017-11-06 13:16:09'),
 (3, 'Restricted Holiday(RH)', 'Restricted Holiday(RH)', '2017-11-06 13:16:38');
 
---
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
@@ -220,7 +165,3 @@ ALTER TABLE `tblleaves`
 ALTER TABLE `tblleavetype`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

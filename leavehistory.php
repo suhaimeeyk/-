@@ -50,6 +50,21 @@ else{
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
         </style>
+         <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+    </style>
+    <style>
+    body {
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    }
+    </style>
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
     </head>
     <body>
        <?php include('includes/header.php');?>
@@ -64,7 +79,7 @@ else{
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">Leave History</span>
+                                <h3>ประวัติการลา</h3>
                                 <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                 <table id="example" class="display responsive-table ">
                                     <thead>
@@ -73,7 +88,7 @@ else{
                                             <th width="120">Leave Type</th>
                                             <th>From</th>
                                             <th>To</th>
-                                             <th>Description</th>
+                                             <th>คำอธิบาย</th>
                                              <th width="120">Posting Date</th>
                                             <th width="200">Admin Remak</th>
                                             <th>Status</th>
@@ -113,11 +128,11 @@ echo htmlentities('waiting for approval');
                                                                                  <td><?php $stats=$result->Status;
 if($stats==1){
                                              ?>
-                                                 <span style="color: green">Approved</span>
+                                                 <span style="color: green">ได้รับการอนุมัติ</span>
                                                  <?php } if($stats==2)  { ?>
-                                                <span style="color: red">Not Approved</span>
+                                                <span style="color: red">ไม่ได้รับการอนุมัติ</span>
                                                  <?php } if($stats==0)  { ?>
- <span style="color: blue">waiting for approval</span>
+ <span style="color: blue">รอการอนุมัติ</span>
  <?php } ?>
 
                                              </td>

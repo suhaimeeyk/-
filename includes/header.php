@@ -48,8 +48,8 @@
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">      
-                            <span class="chapter-title">ELMS | Admin</span>
+                        <div class="header-title col s4">      
+                            <span class="chapter-title">ระบบจัดเก็บข้อมูลการลาออนไลน์ - สำนักงานที่ดินจังหวัดสงขลา</span>
                         </div>
                      
                 
