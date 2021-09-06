@@ -28,7 +28,7 @@ echo "<script type='text/javascript'> document.location = 'myprofile.php'; </scr
 
 else{
 
-  echo "<script>alert('Invalid Details');</script>";
+  echo "<script>alert('รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่');</script>";
 
 }
 
@@ -168,7 +168,7 @@ else{
                     <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i
                                 class="material-icons">account_box</i>เข้าสู่ระบบผู้ใช้</a></li>
                     <li class="no-padding"><a class="waves-effect waves-grey" href="forgot-password.php"><i
-                                class="material-icons">account_box</i>กู้รหัสผ่าน</a></li>
+                                class="material-icons">account_box</i>ลืมรหัสผ่าน</a></li>
 
                     <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i
                                 class="material-icons">account_box</i>เข้าสู่ระบบผู้ดูแล</a></li>
@@ -192,7 +192,7 @@ else{
 
                         <div class="card-content ">
                             <div class="center">
-                            <span class="card-title" style="font-size:20px;">Employee Login</span>
+                                <span class="card-title" style="font-size:20px;">Employee Login</span>
                             </div>
                             <?php if($msg){?><div class="errorWrap"><strong>Error</strong> :
                                 <?php echo htmlentities($msg); ?> </div><?php }?>

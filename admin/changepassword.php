@@ -26,7 +26,7 @@ $chngpwd1 = $dbh->prepare($con);
 $chngpwd1-> bindParam(':username', $username, PDO::PARAM_STR);
 $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
 $chngpwd1->execute();
-$msg="Your Password succesfully changed";
+$msg="คุณได้ทำการเปลี่ยนรหัสผ่านแล้ว";
 }
 else {
 $error="Your current password is wrong";    

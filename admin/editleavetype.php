@@ -19,7 +19,7 @@ $query->bindParam(':description',$description,PDO::PARAM_STR);
 $query->bindParam(':lid',$lid,PDO::PARAM_STR);
 $query->execute();
 
-$msg="Leave type updated Successfully";
+$msg="คุณได้ทำการอัพเดตประเภทการลาแล้ว";
 
 
 }
@@ -97,13 +97,13 @@ foreach($results as $result)
                                         <div class="row">
                                             <div class="input-field col s12">
 <input id="leavetype" type="text"  class="validate" autocomplete="off" name="leavetype" value="<?php echo htmlentities($result->LeaveType);?>"  required>
-                                                <label for="leavetype">Leave Type</label>
+                                                <label for="leavetype">ชื่อประเภทการลา</label>
                                             </div>
 
 
           <div class="input-field col s12">
 <textarea id="textarea1" name="description" class="materialize-textarea" name="description" length="500"><?php echo htmlentities($result->Description);?></textarea>
-                                                <label for="deptshortname">Description</label>
+                                                <label for="deptshortname">คำอธิบายการลา</label>
                                             </div>
  
 <?php }} ?>

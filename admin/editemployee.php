@@ -33,7 +33,7 @@ $query->bindParam(':country',$country,PDO::PARAM_STR);
 $query->bindParam(':mobileno',$mobileno,PDO::PARAM_STR);
 $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 $query->execute();
-$msg="Employee record updated Successfully";
+$msg="คุณได้ทำการแก้ไข้ข้อมูลพนักงานแล้ว";
 }
 
     ?>
@@ -95,7 +95,7 @@ $msg="Employee record updated Successfully";
                             <div class="card-content">
                                 <form id="example-form" method="post" name="updatemp">
                                     <div>
-                                        <h3>Update Employee Info</h3>
+                                        <h3>แก้ไข้ข้อมูลส่วนตัว</h3>
                                            <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                         <section>
@@ -116,19 +116,19 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {               ?> 
  <div class="input-field col  s12">
-<label for="empcode">Employee Code(Must be unique)</label>
+<label for="empcode">รหัสประจำตัว(กรุณาจำ)</label>
 <input  name="empcode" id="empcode" value="<?php echo htmlentities($result->EmpId);?>" type="text" autocomplete="off" readonly required>
 <span id="empid-availability" style="font-size:12px;"></span> 
 </div>
 
 
 <div class="input-field col m6 s12">
-<label for="firstName">First name</label>
+<label for="firstName">ชื่อ</label>
 <input id="firstName" name="firstName" value="<?php echo htmlentities($result->FirstName);?>"  type="text" required>
 </div>
 
 <div class="input-field col m6 s12">
-<label for="lastName">Last name </label>
+<label for="lastName">นามสกุล</label>
 <input id="lastName" name="lastName" value="<?php echo htmlentities($result->LastName);?>" type="text" autocomplete="off" required>
 </div>
 
@@ -139,7 +139,7 @@ foreach($results as $result)
 </div>
 
 <div class="input-field col s12">
-<label for="phone">Mobile number</label>
+<label for="phone">เบอร์โทรการติดต่อ</label>
 <input id="phone" name="mobileno" type="tel" value="<?php echo htmlentities($result->Phonenumber);?>" maxlength="10" autocomplete="off" required>
  </div>
 
@@ -151,14 +151,14 @@ foreach($results as $result)
 <div class="input-field col m6 s12">
 <select  name="gender" autocomplete="off">
 <option value="<?php echo htmlentities($result->Gender);?>"><?php echo htmlentities($result->Gender);?></option>                                          
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-<option value="Other">Other</option>
+<option value="ชาย">ชาย</option>
+<option value="หญิง">หญิง</option>
+<option value="อื่น">อื่น</option>
 </select>
 </div>
 
 <div class="input-field col m6 s12">
-<label for="birthdate">Date of Birth</label>
+<label for="birthdate">วัน/เดือน/ปีเกิด</label><br>
 <input id="birthdate" name="dob"  class="datepicker" value="<?php echo htmlentities($result->Dob);?>" >
 </div>
 
@@ -182,17 +182,17 @@ foreach($results as $resultt)
 </div>
 
 <div class="input-field col m6 s12">
-<label for="address">Address</label>
+<label for="address">ที่อยู่</label>
 <input id="address" name="address" type="text"  value="<?php echo htmlentities($result->Address);?>" autocomplete="off" required>
 </div>
 
 <div class="input-field col m6 s12">
-<label for="city">City/Town</label>
+<label for="city">อำเภอ</label>
 <input id="city" name="city" type="text"  value="<?php echo htmlentities($result->City);?>" autocomplete="off" required>
  </div>
    
 <div class="input-field col m6 s12">
-<label for="country">Country</label>
+<label for="country">ประเทศ</label>
 <input id="country" name="country" type="text"  value="<?php echo htmlentities($result->Country);?>" autocomplete="off" required>
 </div>
 

@@ -14,7 +14,7 @@ else{
     <head>
         
         <!-- Title -->
-        <title>Admin | Dashboard</title>
+        <title>ระบบจัดเก็บข้อมูลการลาออนไลน์ - สำนักงานที่ดินจังหวัดสงขลา</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
@@ -32,6 +32,7 @@ else{
         <!-- Theme Styles -->
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/png" href="assets/images/icon.png" />
         
     </head>
     <body>
@@ -46,7 +47,7 @@ else{
                         <div class="card stats-card">
                             <div class="card-content">
                             
-                                <span class="card-title">Totle Regd Employee</span>
+                                <span class="card-title">จำนวนพนักงานทั้งหมด</span>
                                 <span class="stats-counter">
 <?php
 $sql = "SELECT id from tblemployees";
@@ -65,7 +66,7 @@ $empcount=$query->rowCount();
                         <div class="card stats-card">
                             <div class="card-content">
                             
-                                <span class="card-title">Listed Departments </span>
+                                <span class="card-title">จำนวนแผนกการทำงานทั้งหมด</span>
     <?php
 $sql = "SELECT id from tbldepartments";
 $query = $dbh -> prepare($sql);
@@ -81,7 +82,7 @@ $dptcount=$query->rowCount();
                     <div class="col s12 m12 l4">
                         <div class="card stats-card">
                             <div class="card-content">
-                                <span class="card-title">Listed leave Type</span>
+                                <span class="card-title">จำนวนรายการลาทั้งหมด</span>
                                     <?php
 $sql = "SELECT id from  tblleavetype";
 $query = $dbh -> prepare($sql);
@@ -109,12 +110,11 @@ $leavtypcount=$query->rowCount();
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th width="200">Employe Name</th>
-                                            <th width="120">Leave Type</th>
+                                            <th width="200">รายชื่อพนักงาน</th>
+                                            <th width="120">ประเภทการลา</th>
 
-                                             <th width="180">Posting Date</th>                 
-                                            <th>Status</th>
-                                            <th align="center">Action</th>
+                                             <th width="180">วันที่ส่งยื่นคำขอลา</th>                 
+                                            <th>สถานะการยื่น</th>
                                         </tr>
                                     </thead>
                                  
@@ -138,11 +138,11 @@ foreach($results as $result)
                                                                        <td><?php $stats=$result->Status;
 if($stats==1){
                                              ?>
-                                                 <span style="color: green">Approved</span>
+                                                 <span style="color: green">ได้รับการอนุมัติ</span>
                                                  <?php } if($stats==2)  { ?>
-                                                <span style="color: red">Not Approved</span>
+                                                <span style="color: red">ไม่ได้ได้รับการอนุมัติ</span>
                                                  <?php } if($stats==0)  { ?>
- <span style="color: blue">waiting for approval</span>
+ <span style="color: blue">รอการอนุมัติ</span>
  <?php } ?>
 
 

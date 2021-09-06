@@ -60,7 +60,7 @@ else{
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Pending Leave History</div>
+                        <div class="page-title">รายการรอการดำเนิน</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
@@ -72,12 +72,12 @@ else{
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th width="200">Employe Name</th>
-                                            <th width="120">Leave Type</th>
+                                            <th width="200">ชื่อพนักงาน</th>
+                                            <th width="120">วันที่ทำรายการ</th>
 
-                                             <th width="180">Posting Date</th>                 
-                                            <th>Status</th>
-                                            <th align="center">Action</th>
+                                             <th width="180">วันที่สร้าง</th>                 
+                                            <th>สถานะการยื่น</th>
+                                           
                                         </tr>
                                     </thead>
                                  
@@ -104,11 +104,11 @@ foreach($results as $result)
                                                                        <td><?php $stats=$result->Status;
 if($stats==1){
                                              ?>
-                                                 <span style="color: green">Approved</span>
+                                                 <span style="color: green">ได้รับการอนุมัติ</span>
                                                  <?php } if($stats==2)  { ?>
-                                                <span style="color: red">Not Approved</span>
+                                                <span style="color: red">ไม่ได้ได้รับการอนุมัติ</span>
                                                  <?php } if($stats==0)  { ?>
- <span style="color: blue">waiting for approval</span>
+ <span style="color: blue">รอการอนุมัติ</span>
  <?php } ?>
 
 

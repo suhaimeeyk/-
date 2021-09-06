@@ -60,8 +60,8 @@ $msg="Your Password succesfully changed";
     }
     </style>
 
- <!-- font -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
     <style>
@@ -159,7 +159,7 @@ $msg="Your Password succesfully changed";
                     <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i
                                 class="material-icons">account_box</i>เข้าสู่ระบบผู้ใช้</a></li>
                     <li class="no-padding"><a class="waves-effect waves-grey" href="forgot-password.php"><i
-                                class="material-icons">account_box</i>กู้รหัสผ่าน</a></li>
+                                class="material-icons">account_box</i>ลืมรหัสผ่าน</a></li>
 
                     <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i
                                 class="material-icons">account_box</i>เข้าสู่ระบบผู้ดูแล</a></li>
@@ -169,6 +169,7 @@ $msg="Your Password succesfully changed";
         </aside>
 
         <main class="mn-inner">
+        <br><br><br><br>
             <div class="center">
                 <div class="col s12">
                     <div>
@@ -179,9 +180,10 @@ $msg="Your Password succesfully changed";
             <div class="row">
                 <div class="col s12 m6 l8 offset-l2 offset-m3">
                     <div class="card white darken-1">
-
                         <div class="card-content ">
-                            <span class="card-title" style="font-size:20px;">Employee details</span>
+                            <div class="center">
+                                <span class="card-title" style="font-size:20px;">Employee details</span>
+                            </div>
                             <?php if($msg){?><div class="succWrap"><strong>Success </strong> :
                                 <?php echo htmlentities($msg); ?> </div><?php }?>
                             <div class="row">

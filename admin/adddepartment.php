@@ -21,11 +21,11 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Department Created Successfully";
+$msg="คุณได้ทำการสร้างแผนกใหม่แล้ว";
 }
 else 
 {
-$error="Something went wrong. Please try again";
+$error="เกิดข้อผิดพลาดโปรดตรวจสอบ";
 }
 
 }
@@ -77,7 +77,7 @@ $error="Something went wrong. Please try again";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Add Department</div>
+                        <div class="page-title">เพิ่มแผนกงาน</div>
                     </div>
                     <div class="col s12 m12 l6">
                         <div class="card">
@@ -90,17 +90,17 @@ $error="Something went wrong. Please try again";
                                         <div class="row">
                                             <div class="input-field col s12">
 <input id="departmentname" type="text"  class="validate" autocomplete="off" name="departmentname"  required>
-                                                <label for="deptname">Department Name</label>
+                                                <label for="deptname">ชื่อแผนกงาน</label>
                                             </div>
 
 
           <div class="input-field col s12">
 <input id="departmentshortname" type="text"  class="validate" autocomplete="off" name="departmentshortname"  required>
-                                                <label for="deptshortname">Department Short Name</label>
+                                                <label for="deptshortname">ชื่อย่อแผนกงาน</label>
                                             </div>
   <div class="input-field col s12">
  <input id="deptcode" type="text" name="deptcode" class="validate" autocomplete="off" required>
-                                                <label for="password">Department Code</label>
+                                                <label for="password">รหัสแผนก</label>
                                             </div>
 
 

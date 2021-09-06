@@ -14,7 +14,7 @@ $sql = "delete from  tbldepartments  WHERE id=:id";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_STR);
 $query -> execute();
-$msg="Department record deleted";
+$msg="ทำรายการลบแผนกแล้ว";
 
 }
 
@@ -68,21 +68,21 @@ $msg="Department record deleted";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Manage Departments</div>
+                        <div class="page-title">รายการแผนกงานทั้งหมด</div>
                     </div>
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">Departments Info</span>
+                                <span class="card-title">Departments</span>
                                  <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
                                             <th>Sr no</th>
-                                            <th>Dept Name</th>
-                                            <th>Dept Short Name</th>
-                                            <th>Dept Code</th>
-                                            <th>Creation Date</th>
+                                            <th>ชื่อแผนกงาน</th>
+                                            <th>ชื่อย่อแผนกงาน</th>
+                                            <th>รหัสประจำแผนกงาน</th>
+                                            <th>วันที่สร้าง</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>

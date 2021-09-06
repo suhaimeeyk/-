@@ -32,11 +32,11 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Leave applied successfully";
+$msg="คุณได้ทำการยื่นรายการลาสำเร็จ";
 }
 else 
 {
-$error="Something went wrong. Please try again";
+$error="เกิดข้อผิดพลาดโปรดทำรายการใหม่";
 }
 
 }

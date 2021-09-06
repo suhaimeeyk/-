@@ -20,7 +20,7 @@ $query->bindParam(':deptcode',$deptcode,PDO::PARAM_STR);
 $query->bindParam(':deptshortname',$deptshortname,PDO::PARAM_STR);
 $query->bindParam(':did',$did,PDO::PARAM_STR);
 $query->execute();
-$msg="Department updated Successfully";
+$msg="คุณได้ทำการแก้ไข้แผนกงานแล้ว";
 }
 
     ?>
@@ -96,17 +96,17 @@ foreach($results as $result)
                                         <div class="row">
                                             <div class="input-field col s12">
 <input id="departmentname" type="text"  class="validate" autocomplete="off" name="departmentname" value="<?php echo htmlentities($result->DepartmentName);?>"  required>
-                                                <label for="deptname">Department Name</label>
+                                                <label for="deptname">ชื่อแผนกงาน</label>
                                             </div>
 
 
           <div class="input-field col s12">
 <input id="departmentshortname" type="text"  class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentShortName);?>" name="departmentshortname"  required>
-                                                <label for="deptshortname">Department Short Name</label>
+                                                <label for="deptshortname">ชื่อย่อแผนกงาน</label>
                                             </div>
   <div class="input-field col s12">
  <input id="deptcode" type="text" name="deptcode" class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentCode);?>" required>
-                                                <label for="password">Department Code</label>
+                                                <label for="password">รหัสประจำแผนกงาน</label>
                                             </div>
 
 <?php }} ?>

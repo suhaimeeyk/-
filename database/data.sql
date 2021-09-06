@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS admin(
 
 -- Dumping data for table `admin`
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2020-11-03 05:55:30');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2021-09-06 05:55:30');
 
 
 /*--------tbldepartments-----------*/
@@ -29,9 +29,10 @@ CREATE TABLE IF NOT EXISTS tbldepartments(
 
 
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
-(1, 'Human Resource', 'HR', 'HR001', '2017-11-01 07:16:25'),
-(2, 'Information Technology', 'IT', 'IT001', '2017-11-01 07:19:37'),
-(3, 'Operations', 'OP', 'OP1', '2017-12-02 21:28:56');
+(1, 'ฝ่ายทะเบียน', 'RD', 'RD001', '2021-09-06 07:16:25'),
+(2, 'ฝ่ายอำนวยการ', 'AM', 'AM001', '2021-09-06 07:19:37'),
+(3, 'ฝ่ายรังวัด', 'SY', 'SY001', '2021-09-06 07:19:37'),
+(4, 'ฝ่ายการเงิน', 'OP', 'OP001', '2021-09-06 07:28:56');
 
 
 /*----------tblemployees----------*/
@@ -56,8 +57,8 @@ CREATE TABLE IF NOT EXISTS tblemployees(
 
 -- Dumping data for table `tblemployees`
 INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
-(1, 'EMP10806121', 'Janobe', 'Sourcecode', 'janobe@janobe.com', '36d59e2369f00c4d9f336acf4408bae9', 'Male', '3 February, 1990', 'Human Resource', 'N NEPO', 'NEPO', 'IRE', '9857555555', 1, '2017-11-10 11:29:59'),
-(2, 'DEMP2132', 'James', 'doe', 'james@gmail.com', 'f925916e2754e5e03f75dd58a5733251', 'Male', '3 February, 1990', 'Information Technology', 'N NEPO', 'NEPO', 'IRE', '8587944255', 1, '2017-11-10 13:40:02');
+(1, 'RD001', 'นายทวีศักดิ์  ', 'นิลประเสริฐ', 'twisak@gmail.com', '36d59e2369f00c4d9f336acf4408bae9', 'ชาย', '3 February, 1990', 'ฝ่ายทะเบียน', 'จ.ปัตตานี', 'อ.เมือง', 'ไทย', '0123456789', 1, '2021-09-06 11:29:59'),
+(2, 'AM001', 'นายจักรกฤษณ์', 'วัชรวรานนท์', 'james@gmail.com', 'f925916e2754e5e03f75dd58a5733251', 'ชาย', '3 February, 1990', 'ฝ่ายอำนวยการ', 'จ.สงขลา', 'อ.เมือง', 'ไทย', '9876543210', 1, '2021-09-06 13:40:02');
 
 
 /*-------------tblleaves-----------*/
@@ -79,12 +80,8 @@ CREATE TABLE IF NOT EXISTS tblleaves(
 --
 
 INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`, `PostingDate`, `AdminRemark`, `AdminRemarkDate`, `Status`, `IsRead`, `empid`) VALUES
-(7, 'Casual Leave', '30/11/2017', '29/10/2017', 'test description test descriptiontest descriptiontest descriptiontest descriptiontest descriptiontest descriptiontest description', '2017-11-19 13:11:21', 'Lorem Ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.\r\n', '2017-12-02 23:26:27 ', 2, 1, 1),
-(8, 'Medical Leave test', '21/10/2017', '25/10/2017', 'test description test descriptiontest descriptiontest descriptiontest descriptiontest descriptiontest descriptiontest description', '2017-11-20 11:14:14', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2017-12-02 23:24:39 ', 1, 1, 1),
-(9, 'Medical Leave test', '08/12/2017', '12/12/2017', 'Lorem Ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.\r\n', '2017-12-02 18:26:01', NULL, NULL, 0, 1, 2),
-(10, 'Restricted Holiday(RH)', '25/12/2017', '25/12/2017', 'Lorem Ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.', '2017-12-03 08:29:07', 'Lorem Ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.', '2017-12-03 14:06:12 ', 1, 1, 1),
-(11, 'Casual Leave', '22/02/2022', '22/02/2022', 'sad', '2020-11-03 05:20:58', NULL, NULL, 0, 0, 1),
-(12, 'Casual Leave', '22/02/2022', '22/02/2022', 'sad', '2020-11-03 05:52:49', NULL, NULL, 0, 0, 1);
+(1, 'มีเหตุจำเป็น', '07/09/2021', '09/10/2017', 'พ่อไม่สบาย', '2021-09-06 13:11:21', 'ถ้าหากมีเหตุจำเป็นให้พนักงานทำการเก็บหลักฐานต่างๆแล้วเอามายื่นวันที่มาทำงาน', '2021-09-06 23:26:27 ', 2, 1, 1),
+(2, 'มีอาการไม่สบายกระทันหัน', '07/09/2021', '09/10/2017', 'ตัวร้อนหนัก', '2021-09-06 13:11:21', 'ถ้ามีอาการไม่สบายกระทันหันให้พนักทำการไปขอใบรับรองแพทน์และมาทำการยื่นในวันที่มาทำงาน', '2021-09-06 23:24:39 ', 1, 1, 1);
 
 /*-------------tblleavetype-----------*/
 CREATE TABLE IF NOT EXISTS tblleavetype(
@@ -97,9 +94,12 @@ CREATE TABLE IF NOT EXISTS tblleavetype(
 --
 
 INSERT INTO `tblleavetype` (`id`, `LeaveType`, `Description`, `CreationDate`) VALUES
-(1, 'Casual Leave', 'Casual Leave ', '2017-11-01 12:07:56'),
-(2, 'Medical Leave test', 'Medical Leave  test', '2017-11-06 13:16:09'),
-(3, 'Restricted Holiday(RH)', 'Restricted Holiday(RH)', '2017-11-06 13:16:38');
+(1, 'มีเหตุจำเป็น', 'ถ้าหากมีเหตุจำเป็นให้พนักงานทำการเก็บหลักฐานต่างๆแล้วเอามายื่นวันที่มาทำงาน ', '2021-09-06 12:07:56'),
+(2, 'มีอาการไม่สบายกระทันหัน', 'ถ้ามีอาการไม่สบายกระทันหันให้พนักทำการไปขอใบรับรองแพทน์และมาทำการยื่นในวันที่มาทำงาน', '2021-09-06 13:16:09'),
+(3, 'เนื่องจากเป็นวันหยุด', 'วันหยุดปกติ', '2021-09-06 13:16:09'),
+(4, 'เกิดอุบัติเหตุระหว่างทาง', 'ทำการถ่ายรูปหรือหลักฐานต่าง', '2021-09-06 13:16:09'),
+(5, 'ไม่มียานพาหนะในการเดินทาง', 'กรุณาระบุเหตุผล', '2021-09-06 13:16:09'),
+(6, 'ลาอื่น', 'โปรดระบุ', '2021-09-06 13:16:38');
 
 -- Indexes for table `admin`
 --

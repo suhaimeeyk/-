@@ -76,12 +76,14 @@ $msg="Employee record updated Successfully";
         -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     }
+    
     </style>
 
 
 
 
-
+<!-- icon -->
+<link rel="icon" type="image/png" href="/assets/images/icon.png" />
 </head>
 
 <body>
@@ -121,7 +123,7 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {               ?>
                                                     <div class="input-field col  s12">
-                                                        <label for="empcode">Employee Code</label>
+                                                        <label for="empcode">รหัสประจำตัว</label>
                                                         <input name="empcode" id="empcode"
                                                             value="<?php echo htmlentities($result->EmpId);?>"
                                                             type="text" autocomplete="off" readonly required>
@@ -166,12 +168,12 @@ foreach($results as $result)
                                                     <div class="input-field col m6 s12">
                                                         <select name="gender" autocomplete="off">
                                                             <option value="<?php echo htmlentities($result->Gender);?>">เพศ</option>
-                                                            <option value="Male">ชาย</option>
-                                                            <option value="Female">หญิง</option>
-                                                            <option value="Other">อื่น</option>
+                                                            <option value="ชาย">ชาย</option>
+                                                            <option value="หญิง">หญิง</option>
+                                                            <option value="อื่น">อื่น</option>
                                                         </select>
                                                     </div>
-                                                    <label for="birthdate">Date of Birth</label>
+                                                    <label for="birthdate">วัน/เดือน/ปีเกิด</label>
                                                     <div class="input-field col m6 s12">
 
                                                         <input id="birthdate" name="dob" class="datepicker"

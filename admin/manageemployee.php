@@ -84,22 +84,22 @@ header('location:manageemployee.php');
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Manage EmployesWWW</div>
+                        <div class="page-title">รายชื่อพนักงานทั้งหมด</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">Employees Info</span>
+                                <span class="card-title">Employees</span>
                                 <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
                                             <th>Sr no</th>
-                                            <th>Emp Id</th>
-                                            <th>Full Name</th>
-                                            <th>Department</th>
-                                             <th>Status</th>
+                                            <th>รหัสประจำตัว</th>
+                                            <th>ชื่อ-นามสกุล</th>
+                                            <th>ชื่อแผนกงาน</th>
+                                             <th>สถานะ</th>
                                              <th>Reg Date</th>
                                             <th>Action</th>
                                         </tr>

@@ -34,7 +34,7 @@ $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->bindParam(':admremarkdate',$admremarkdate,PDO::PARAM_STR);
 $query->bindParam(':did',$did,PDO::PARAM_STR);
 $query->execute();
-$msg="Leave updated Successfully";
+$msg="คุณได้ทำการแก้ไข้ข้อมูลการลาแล้ว";
 }
 
 
@@ -89,7 +89,7 @@ $msg="Leave updated Successfully";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="font-size:24px;">Leave Details</div>
+                        <div class="page-title" style="font-size:24px;">ข้อมูลการลา</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
@@ -116,41 +116,41 @@ foreach($results as $result)
       ?>  
 
                                         <tr>
-                                            <td style="font-size:16px;"> <b>Employe Name :</b></td>
+                                            <td style="font-size:16px;"> <b>ชื่อ :</b></td>
                                               <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>" target="_blank">
                                                 <?php echo htmlentities($result->FirstName." ".$result->LastName);?></a></td>
-                                              <td style="font-size:16px;"><b>Emp Id :</b></td>
+                                              <td style="font-size:16px;"><b>รหัสประจำด้วย :</b></td>
                                               <td><?php echo htmlentities($result->EmpId);?></td>
-                                              <td style="font-size:16px;"><b>Gender :</b></td>
+                                              <td style="font-size:16px;"><b>เพศ :</b></td>
                                               <td><?php echo htmlentities($result->Gender);?></td>
                                           </tr>
 
                                           <tr>
-                                             <td style="font-size:16px;"><b>Emp Email id :</b></td>
+                                             <td style="font-size:16px;"><b>Email:</b></td>
                                             <td><?php echo htmlentities($result->EmailId);?></td>
-                                             <td style="font-size:16px;"><b>Emp Contact No. :</b></td>
+                                             <td style="font-size:16px;"><b>เบอร์โทรการติดต่อ :</b></td>
                                             <td><?php echo htmlentities($result->Phonenumber);?></td>
                                             <td>&nbsp;</td>
                                              <td>&nbsp;</td>
                                         </tr>
 
   <tr>
-                                             <td style="font-size:16px;"><b>Leave Type :</b></td>
+                                             <td style="font-size:16px;"><b>ประเภทการลา :</b></td>
                                             <td><?php echo htmlentities($result->LeaveType);?></td>
-                                             <td style="font-size:16px;"><b>Leave Date . :</b></td>
+                                             <td style="font-size:16px;"><b>วันที่ต้องการลา :</b></td>
                                             <td>From <?php echo htmlentities($result->FromDate);?> to <?php echo htmlentities($result->ToDate);?></td>
-                                            <td style="font-size:16px;"><b>Posting Date</b></td>
+                                            <td style="font-size:16px;"><b>ถึงวันที่</b></td>
                                            <td><?php echo htmlentities($result->PostingDate);?></td>
                                         </tr>
 
 <tr>
-                                             <td style="font-size:16px;"><b>Employe Leave Description : </b></td>
+                                             <td style="font-size:16px;"><b>คำอธิบายการลา : </b></td>
                                             <td colspan="5"><?php echo htmlentities($result->Description);?></td>
                                           
                                         </tr>
 
 <tr>
-<td style="font-size:16px;"><b>leave Status :</b></td>
+<td style="font-size:16px;"><b>สถานะการยื่น :</b></td>
 <td colspan="5"><?php $stats=$result->Status;
 if($stats==1){
 ?>
@@ -164,7 +164,7 @@ if($stats==1){
 </tr>
 
 <tr>
-<td style="font-size:16px;"><b>Admin Remark: </b></td>
+<td style="font-size:16px;"><b>รายการที่ผู้ดูแลตอบกลับ: </b></td>
 <td colspan="5"><?php
 if($result->AdminRemark==""){
   echo "waiting for Approval";  
@@ -176,7 +176,7 @@ echo htmlentities($result->AdminRemark);
  </tr>
 
  <tr>
-<td style="font-size:16px;"><b>Admin Action taken date : </b></td>
+<td style="font-size:16px;"><b>เวลารายการที่ผู้ดูแลตอบกลับ : </b></td>
 <td colspan="5"><?php
 if($result->AdminRemarkDate==""){
   echo "NA";  
@@ -197,11 +197,11 @@ if($stats==0)
 <form name="adminaction" method="post">
 <div id="modal1" class="modal modal-fixed-footer" style="height: 60%">
     <div class="modal-content" style="width:90%">
-        <h4>Leave take action</h4>
+        <h4>ทำรายการตอบกลับ</h4>
           <select class="browser-default" name="status" required="">
-                                            <option value="">Choose your option</option>
-                                            <option value="1">Approved</option>
-                                            <option value="2">Not Approved</option>
+                                            <option value="">โปรดเลือกการตอบกลับ..</option>
+                                            <option value="1">ได้รับการอนุมัติ</option>
+                                            <option value="2">ไม่ได้รับการอนุมัติ</option>
                                         </select></p>
                                         <p><textarea id="textarea1" name="description" class="materialize-textarea" name="description" placeholder="Description" length="500" maxlength="500" required></textarea></p>
     </div>

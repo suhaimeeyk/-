@@ -19,7 +19,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Leave type added Successfully";
+$msg="คุณได้ทำการเพิ่มประเภทการลาแล้ว";
 }
 else 
 {
@@ -75,7 +75,7 @@ $error="Something went wrong. Please try again";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Add Leave Type</div>
+                        <div class="page-title">เพิ่มประเภทการลา</div>
                     </div>
                     <div class="col s12 m12 l6">
                         <div class="card">
@@ -88,13 +88,13 @@ $error="Something went wrong. Please try again";
                                         <div class="row">
                                             <div class="input-field col s12">
 <input id="leavetype" type="text"  class="validate" autocomplete="off" name="leavetype"  required>
-                                                <label for="leavetype">Leave Type</label>
+                                                <label for="leavetype">ประเภทการลา</label>
                                             </div>
 
 
           <div class="input-field col s12">
 <textarea id="textarea1" name="description" class="materialize-textarea" name="description" length="500"></textarea>
-                                                <label for="deptshortname">Description</label>
+                                                <label for="deptshortname">คำอธิบายการลา</label>
                                             </div>
  
 

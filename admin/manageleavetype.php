@@ -14,7 +14,7 @@ $sql = "delete from  tblleavetype  WHERE id=:id";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_STR);
 $query -> execute();
-$msg="Leave type record deleted";
+$msg="ทำรายการลบประเภทการลาแล้ว";
 
 }
  ?>
@@ -67,21 +67,21 @@ $msg="Leave type record deleted";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Manage Leave Type</div>
+                        <div class="page-title">ประเภทการลาทั้งหมด</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">Leave Type Info</span>
+                                <span class="card-title">Leave Type</span>
                                 <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
                                             <th>Sr no</th>
-                                            <th>Leave Type</th>
-                                            <th>Description</th>
-                                            <th>Creation Date</th>
+                                            <th>ชื่อประเภทการลา</th>
+                                            <th>คำอธิบายการลา</th>
+                                            <th>วันที่สร้าง</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>

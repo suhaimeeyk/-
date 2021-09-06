@@ -14,10 +14,10 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
 $_SESSION['alogin']=$_POST['username'];
-echo "<script type='text/javascript'> document.location = 'changepassword.php'; </script>";
+echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
 } else{
   
-  echo "<script>alert('Invalid Details');</script>";
+  echo "<script>alert('รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่');</script>";
 
 }
 
@@ -60,7 +60,7 @@ echo "<script type='text/javascript'> document.location = 'changepassword.php'; 
     </style>
 
     <!-- icon -->
-    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+    <link rel="icon" type="image/png" href="/assets/images/icon.png" />
 
 </head>
 

@@ -42,7 +42,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Employee record added Successfully";
+$msg="คุณได้ทำการเพิ่มรายชื่อพนักงานแล้ว";
 }
 else 
 {
@@ -145,14 +145,14 @@ error:function (){}
    <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Add employee</div>
+                        <div class="page-title">เพิ่มรายชื่อพนักงาน</div>
                     </div>
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
                                 <form id="example-form" method="post" name="addemp">
                                     <div>
-                                        <h3>Employee Info</h3>
+                                        <h3>Employee</h3>
                                         <section>
                                             <div class="wizard-content">
                                                 <div class="row">
@@ -163,19 +163,19 @@ error:function (){}
 
 
  <div class="input-field col  s12">
-<label for="empcode">Employee Code(Must be unique)</label>
+<label for="empcode">รหัสประจำตัว<font color="FF0000">(กรุณาจำ)</font></label>
 <input  name="empcode" id="empcode" onBlur="checkAvailabilityEmpid()" type="text" autocomplete="off" required>
 <span id="empid-availability" style="font-size:12px;"></span> 
 </div>
 
 
 <div class="input-field col m6 s12">
-<label for="firstName">First name</label>
+<label for="firstName">ชื่อ<font color="FF0000">(โปรดระบุคำนำหน้า)</font></label>
 <input id="firstName" name="firstName" type="text" required>
 </div>
 
 <div class="input-field col m6 s12">
-<label for="lastName">Last name</label>
+<label for="lastName">นามสกุล</label>
 <input id="lastName" name="lastName" type="text" autocomplete="off" required>
 </div>
 
@@ -201,15 +201,15 @@ error:function (){}
 <div class="row">
 <div class="input-field col m6 s12">
 <select  name="gender" autocomplete="off">
-<option value="">Gender...</option>                                          
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-<option value="Other">Other</option>
+<option value="">เพศ...</option>                                          
+<option value="ชาย">ชาย</option>
+<option value="หญิง">หญิง</option>
+<option value="อื่น">อื่น</option>
 </select>
 </div>
 
 <div class="input-field col m6 s12">
-<label for="birthdate">Birthdate</label>
+<label for="birthdate">วัน/เดือน/ปีเกิด</label>
 <input id="birthdate" name="dob" type="date" class="datepicker" autocomplete="off" >
 </div>
 
@@ -217,7 +217,7 @@ error:function (){}
 
 <div class="input-field col m6 s12">
 <select  name="department" autocomplete="off">
-<option value="">Department...</option>
+<option value="">แผนก...</option>
 <?php $sql = "SELECT DepartmentName from tbldepartments";
 $query = $dbh -> prepare($sql);
 $query->execute();
@@ -233,23 +233,23 @@ foreach($results as $result)
 </div>
 
 <div class="input-field col m6 s12">
-<label for="address">Address</label>
+<label for="address">ที่อยู่</label>
 <input id="address" name="address" type="text" autocomplete="off" required>
 </div>
 
 <div class="input-field col m6 s12">
-<label for="city">City/Town</label>
+<label for="city">อำเภอ</label>
 <input id="city" name="city" type="text" autocomplete="off" required>
  </div>
    
 <div class="input-field col m6 s12">
-<label for="country">Country</label>
+<label for="country">ประเทศ</label>
 <input id="country" name="country" type="text" autocomplete="off" required>
 </div>
 
                                                             
 <div class="input-field col s12">
-<label for="phone">Mobile number</label>
+<label for="phone">เบอร์โทรศัพย์</label>
 <input id="phone" name="mobileno" type="tel" maxlength="10" autocomplete="off" required>
  </div>
 
