@@ -160,6 +160,12 @@ ALTER TABLE `tblleaves`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+
+-- setAUTO_INCREMENT
+alter table tblleaves AUTO_INCREMENT=3;
+
+
+
 -- AUTO_INCREMENT for table `tblleavetype`
 --
 ALTER TABLE `tblleavetype`

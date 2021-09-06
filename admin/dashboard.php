@@ -98,7 +98,7 @@ $dptcount=$query->rowCount();
                             <div class="card-content">
                                 <span class="card-title">จำนวนรายการลาทั้งหมด</span>
                                     <?php
-$sql = "SELECT id from  tblleavetype";
+$sql = "SELECT id from  tblleaves";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);

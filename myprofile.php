@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 error_reporting(0);
@@ -36,7 +37,8 @@ $query->execute();
 $msg="Employee record updated Successfully";
 }
 
-    ?>
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -266,4 +268,4 @@ foreach($results as $resultt)
 </body>
 
 </html>
-<?php } ?>
+<?php }?>

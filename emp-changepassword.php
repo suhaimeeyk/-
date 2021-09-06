@@ -32,6 +32,7 @@ else {
 $error="Your current password is wrong";    
 }
 }
+
 ?>
 
 <!DOCTYPE html>

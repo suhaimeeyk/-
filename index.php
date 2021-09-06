@@ -18,8 +18,8 @@ if($query->rowCount() > 0)
     $status=$result->Status;
     $_SESSION['eid']=$result->id;
   }
-if($status==0)
-{
+        if($status==0)
+        {
 $msg="Your account is Inactive. Please contact admin";
 } else{
 $_SESSION['emplogin']=$_POST['username'];
@@ -35,6 +35,8 @@ else{
 }
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

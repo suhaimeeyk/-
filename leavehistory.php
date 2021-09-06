@@ -7,6 +7,7 @@ if(strlen($_SESSION['emplogin'])==0)
 header('location:index.php');
 }
 else{
+    
 
  ?>
 <!DOCTYPE html>
@@ -50,7 +51,7 @@ else{
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
         </style>
-        
+
          <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
