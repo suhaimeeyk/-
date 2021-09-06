@@ -46,8 +46,8 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
     <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+          <!-- font -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
     <style>
@@ -60,7 +60,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
     </style>
 
     <!-- icon -->
-    <link rel="icon" type="image/png" href="/assets/images/icon.png" />
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
 
 </head>
 

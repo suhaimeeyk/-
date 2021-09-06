@@ -63,6 +63,21 @@ $msg="คุณได้ทำการอัพเดตประเภทก�
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
         </style>
+                 <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+    </style>
+    <style>
+    body {
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    }
+    </style>
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
     </head>
     <body>
   <?php include('includes/header.php');?>

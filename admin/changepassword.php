@@ -53,6 +53,21 @@ $error="Your current password is wrong";
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet"> 
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
+                 <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+    </style>
+    <style>
+    body {
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    }
+    </style>
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
     </head>
     <body>
   <?php include('includes/header.php');?>
