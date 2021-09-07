@@ -176,7 +176,7 @@ else{
             <div class="side-nav-wrapper">
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion" style="">
                     <div class="center">
-                        <img src="assets/images/logo-1.jpg" class="circle" alt="">
+                        <img src="assets/images/logo-2.jpg" class="circle" alt="">
                     </div><br>
                     <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i
                                 class="material-icons">account_box</i>เข้าสู่ระบบผู้ใช้</a></li>
