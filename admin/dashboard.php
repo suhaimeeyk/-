@@ -33,6 +33,7 @@ else{
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/png" href="assets/images/icon.png" />
+        
                  <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,9 +48,11 @@ else{
     </style>
 
     <!-- icon -->
-    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+    <link rel="icon" type="image/png" href="/assets/images/icon.png" />
+
     </head>
     <body>
+    <div class="loader-bg"></div>
            <?php include('includes/header.php');?>
             
        <?php include('includes/sidebar.php');?>

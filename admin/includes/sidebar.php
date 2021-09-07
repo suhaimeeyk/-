@@ -43,7 +43,7 @@
                     </li>
 
    <li class="no-padding">
-                        <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">desktop_windows</i>การจัดการลาพนักงาน<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                        <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">desktop_windows</i>รายการลาพนักงาน<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                         <div class="collapsible-body">
                             <ul>
                                 <li><a href="leaves.php" >รายการลาพนักงานทั้งหมด</a></li>
@@ -59,7 +59,7 @@
 
 
                         <li class="no-padding">
-                                <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Sign Out</a>
+                                <a class="waves-effect waves-grey" onclick="return confirm('แน่ใจหรือไหมที่จะออกจากระบบ ?');" href="logout.php"><i class="material-icons">exit_to_app</i>Sign Out</a>
                             </li>  
                  
 

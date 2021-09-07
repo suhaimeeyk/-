@@ -13,7 +13,7 @@ $chngpwd1 = $dbh->prepare($con);
 $chngpwd1-> bindParam(':empid', $empid, PDO::PARAM_STR);
 $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
 $chngpwd1->execute();
-$msg="Your Password succesfully changed";
+$msg="คุณได้ทำการเปลี่ยนรหัสผ่านแล้ว";
 }
 
 ?>
@@ -224,7 +224,7 @@ foreach ($results as $result) {
     ?>
 
                         <div class="row">
-                            <span class="card-title" style="font-size:20px;">change your password </span>
+                            <span class="card-title" style="font-size:20px;">ทำรายการเปลี่ยนรหัสผ่านใหม่</span>
                             <form class="col s12" name="udatepwd" method="post">
                                 <div class="input-field col s12">
                                     <input id="password" type="password" name="newpassword" class="validate"

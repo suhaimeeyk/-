@@ -114,7 +114,7 @@ header('location:manageemployee.php');
                                             <th>รหัสประจำตัว</th>
                                             <th>ชื่อ-นามสกุล</th>
                                             <th>ชื่อแผนกงาน</th>
-                                             <th>สถานะ</th>
+                                            <th>สถานะ</th>
                                              <th>Reg Date</th>
                                             <th>Action</th>
                                         </tr>
@@ -149,7 +149,7 @@ if($stats){
                                             <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>"><i class="material-icons">mode_edit</i></a>
                                         <?php if($result->Status==1)
  {?>
-<a href="manageemployee.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to inactive this Employe?');"" > <i class="material-icons" title="Inactive">clear</i>
+<a href="manageemployee.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('คุณต้องการที่จะลบข้อมูลพนักงานหรือไหม ?');"" > <i class="material-icons" title="Inactive">clear</i>
 <?php } else {?>
 
                                             <a href="manageemployee.php?id=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to active this employee?');""><i class="material-icons" title="Active">done</i>

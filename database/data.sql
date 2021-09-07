@@ -29,10 +29,10 @@ CREATE TABLE IF NOT EXISTS tbldepartments(
 
 
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
-(1, 'ฝ่ายทะเบียน', 'RD', 'RD001', '2021-09-06 07:16:25'),
-(2, 'ฝ่ายอำนวยการ', 'AM', 'AM001', '2021-09-06 07:19:37'),
-(3, 'ฝ่ายรังวัด', 'SY', 'SY001', '2021-09-06 07:19:37'),
-(4, 'ฝ่ายการเงิน', 'OP', 'OP001', '2021-09-06 07:28:56');
+(1, 'ฝ่ายทะเบียน', 'RD', 'RD000', '2021-09-06 07:16:25'),
+(2, 'ฝ่ายอำนวยการ', 'AM', 'AM000', '2021-09-06 07:19:37'),
+(3, 'ฝ่ายรังวัด', 'SY', 'SY000', '2021-09-06 07:19:37'),
+(4, 'ฝ่ายการเงิน', 'OP', 'OP000', '2021-09-06 07:28:56');
 
 
 /*----------tblemployees----------*/
@@ -163,7 +163,9 @@ ALTER TABLE `tblleaves`
 
 -- setAUTO_INCREMENT
 alter table tblleaves AUTO_INCREMENT=3;
-
+alter table tbldepartments AUTO_INCREMENT=5;
+alter table tblemployees AUTO_INCREMENT=3;
+alter table tblleavetype AUTO_INCREMENT=7;
 
 
 -- AUTO_INCREMENT for table `tblleavetype`

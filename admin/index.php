@@ -16,9 +16,14 @@ if($query->rowCount() > 0)
 $_SESSION['alogin']=$_POST['username'];
 echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
 } else{
-  
-  echo "<script>alert('รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่');</script>";
-
+    echo'
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <srcript src="https://code.jquery.com/jquery-3.6.0.min.js"></srcript>
+';
+  echo "
+  <script>
+  swal('เกิดข้อผิดพลาดโปรดลองใหม่!','กดปุ่มเพื่อลองใหม่!','warning');
+  </script>";
 }
 
 }
@@ -46,8 +51,8 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
     <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
 
-          <!-- font -->
-          <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
     <style>
@@ -60,15 +65,18 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
     </style>
 
     <!-- icon -->
-    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+    <link rel="icon" type="image/png" href="/admin/includes/icon.png" />
 
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    
 </head>
 
 <button class="btn btn-primary" type="button"><a href="../index.php">
-                        <font color="FFFFFF">กลับสู่หน้าหลัก
-                    </a></font> </button>
-<body class="signin-page">
+        <font color="FFFFFF">กลับสู่หน้าหลัก
+    </a></font> </button>
 
+<body class="signin-page">
     <div class="mn-content valign-wrapper">
         <main class="mn-inner container">
             <h4 align="center"><a>ยินดีต้อนรับสู่ระบบผู้ดูแล - สำนักงานที่ดินจังหวัดสงขลา</a></h4>
@@ -102,7 +110,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
                     </div>
                 </div>
             </div>
-            
+
         </main>
     </div>
 

@@ -47,7 +47,7 @@
 
 
                  <li class="no-padding">
-                     <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Sign
+                     <a class="waves-effect waves-grey" onclick="return confirm('แน่ใจหรือไหมที่จะออกจากระบบ ?');" href="logout.php"><i class="material-icons">exit_to_app</i>Sign
                          Out</a>
                  </li>
 

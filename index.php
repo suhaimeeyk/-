@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 error_reporting(0);
 include('includes/config.php');
@@ -23,12 +24,19 @@ if($query->rowCount() > 0)
 $msg="Your account is Inactive. Please contact admin";
 } else{
 $_SESSION['emplogin']=$_POST['username'];
-echo "<script type='text/javascript'> document.location = 'myprofile.php'; </script>";
+echo "
+<script type='text/javascript'> document.location = 'myprofile.php'; </script>";
 } }
 
 else{
-
-  echo "<script>alert('รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่');</script>";
+    echo'
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <srcript src="https://code.jquery.com/jquery-3.6.0.min.js"></srcript>
+';
+  echo "
+  <script>
+  swal('เกิดข้อผิดพลาดโปรดลองใหม่!','กดปุ่มเพื่อลองใหม่!','warning');
+  </script>";
 
 }
 
@@ -89,7 +97,10 @@ else{
 </head>
 
 <body>
-    <div class="loader-bg"></div>
+    
+    <div class="loader-bg">
+
+    </div>
     <div class="loader">
         <div class="preloader-wrapper big active">
             <div class="spinner-layer spinner-blue">
@@ -200,8 +211,7 @@ else{
                                 <?php echo htmlentities($msg); ?> </div><?php }?>
                             <div class="row">
                                 <form class="col s12" name="signin" method="post">
-                                    <div class="input-field col s12">
-                                        <input id="username" type="text" name="username" class="validate"
+                                    <div class="input-field col s12"><input id="username" type="text" name="username" class="validate"
                                             autocomplete="off" required>
                                         <label for="email">Email</label>
                                     </div>
@@ -233,6 +243,7 @@ else{
     <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
     <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
     <script src="assets/js/alpha.min.js"></script>
+
 
 </body>
 <!-- sadsad -->

@@ -95,7 +95,7 @@ function valid()
 {
 if(document.addemp.password.value!= document.addemp.confirmpassword.value)
 {
-alert("New Password and Confirm Password Field do not match  !!");
+alert("เกิดข้อผิดพลาดโปรดตรวจสอบ  !!");
 document.addemp.confirmpassword.focus();
 return false;
 }

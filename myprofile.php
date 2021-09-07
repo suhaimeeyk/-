@@ -99,9 +99,11 @@ $msg="Employee record updated Successfully";
 </head>
 
 <body>
+    
     <?php include('includes/header.php');?>
 
     <?php include('includes/sidebar.php');?>
+    <div class="loader-bg"></div>
     <main class="mn-inner">
         <div class="row">
             <div class="col s12">
@@ -179,7 +181,7 @@ foreach($results as $result)
                                                 <div class="row">
                                                     <div class="input-field col m6 s12">
                                                         <select name="gender" autocomplete="off">
-                                                            <option value="<?php echo htmlentities($result->Gender);?>">เพศ</option>
+                                                            <option value="<?php echo htmlentities($result->Gender);?>"><?php echo htmlentities($result->Gender);?></option>
                                                             <option value="ชาย">ชาย</option>
                                                             <option value="หญิง">หญิง</option>
                                                             <option value="อื่น">อื่น</option>
