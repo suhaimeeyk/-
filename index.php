@@ -14,19 +14,19 @@ $query-> bindParam(':password', $password, PDO::PARAM_STR);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
-{
- foreach ($results as $result) {
-    $status=$result->Status;
-    $_SESSION['eid']=$result->id;
-  }
-        if($status==0)
-        {
-$msg="Your account is Inactive. Please contact admin";
-} else{
-$_SESSION['emplogin']=$_POST['username'];
-echo "
-<script type='text/javascript'> document.location = 'myprofile.php'; </script>";
-} }
+            {
+            foreach ($results as $result) {
+                $status=$result->Status;
+                $_SESSION['eid']=$result->id;
+            }
+                    if($status==0)
+                    {
+            $msg="Your account is Inactive. Please contact admin";
+            } else{
+            $_SESSION['emplogin']=$_POST['username'];
+            echo "
+            <script type='text/javascript'> document.location = 'myprofile.php'; </script>";
+            } }
 
 else{
     echo'
@@ -97,7 +97,7 @@ else{
 </head>
 
 <body>
-    
+
     <div class="loader-bg">
 
     </div>
@@ -149,6 +149,7 @@ else{
             </div>
         </div>
     </div>
+    
     <div class="mn-content fixed-sidebar">
         <header class="mn-header navbar-fixed">
             <nav class="cyan darken-1">
@@ -211,8 +212,8 @@ else{
                                 <?php echo htmlentities($msg); ?> </div><?php }?>
                             <div class="row">
                                 <form class="col s12" name="signin" method="post">
-                                    <div class="input-field col s12"><input id="username" type="text" name="username" class="validate"
-                                            autocomplete="off" required>
+                                    <div class="input-field col s12"><input id="username" type="text" name="username"
+                                            class="validate" autocomplete="off" required>
                                         <label for="email">Email</label>
                                     </div>
                                     <div class="input-field col s12">

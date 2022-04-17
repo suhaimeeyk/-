@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 error_reporting(0);
@@ -78,11 +77,10 @@ $msg="Employee record updated Successfully";
         -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     }
-    
     </style>
 
-         <!-- font -->
-         <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap" rel="stylesheet">
     <style>
@@ -99,7 +97,7 @@ $msg="Employee record updated Successfully";
 </head>
 
 <body>
-    
+
     <?php include('includes/header.php');?>
 
     <?php include('includes/sidebar.php');?>
@@ -116,7 +114,8 @@ $msg="Employee record updated Successfully";
                             <div>
                                 <h3>แก้ไข้ข้อมูลส่วนตัว</h3>
                                 <?php if($error){?><div class="errorWrap">
-                                    <strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+                                    <strong>ERROR</strong>:<?php echo htmlentities($error); ?>
+                                </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?>
                                 </div><?php }?>
                                 <section>
@@ -125,17 +124,17 @@ $msg="Employee record updated Successfully";
                                             <div class="col m6">
                                                 <div class="row">
                                                     <?php 
-$eid=$_SESSION['emplogin'];
-$sql = "SELECT * from  tblemployees where EmailId=:eid";
-$query = $dbh -> prepare($sql);
-$query -> bindParam(':eid',$eid, PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
-{               ?>
+                                $eid=$_SESSION['emplogin'];
+                                $sql = "SELECT * from  tblemployees where EmailId=:eid";
+                                $query = $dbh -> prepare($sql);
+                                $query -> bindParam(':eid',$eid, PDO::PARAM_STR);
+                                $query->execute();
+                                $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt=1;
+                                if($query->rowCount() > 0)
+                                {
+                                foreach($results as $result)
+                                {               ?>
                                                     <div class="input-field col  s12">
                                                         <label for="empcode">รหัสประจำตัว</label>
                                                         <input name="empcode" id="empcode"
@@ -181,7 +180,8 @@ foreach($results as $result)
                                                 <div class="row">
                                                     <div class="input-field col m6 s12">
                                                         <select name="gender" autocomplete="off">
-                                                            <option value="<?php echo htmlentities($result->Gender);?>"><?php echo htmlentities($result->Gender);?></option>
+                                                            <option value="<?php echo htmlentities($result->Gender);?>">
+                                                                <?php echo htmlentities($result->Gender);?></option>
                                                             <option value="ชาย">ชาย</option>
                                                             <option value="หญิง">หญิง</option>
                                                             <option value="อื่น">อื่น</option>
@@ -194,9 +194,12 @@ foreach($results as $result)
                                                             value="<?php echo htmlentities($result->Dob);?>">
                                                     </div>
 
-<div class="input-field col m6 s12"><select  name="department" autocomplete="off">
-<option value="<?php echo htmlentities($result->Department);?>">แผนกงาน</option>
-<?php $sql = "SELECT DepartmentName from tbldepartments";
+                                                    <div class="input-field col m6 s12"><select name="department"
+                                                            autocomplete="off">
+                                                            <option
+                                                                value="<?php echo htmlentities($result->Department);?>">
+                                                                แผนกงาน</option>
+                                                            <?php $sql = "SELECT DepartmentName from tbldepartments";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -204,11 +207,14 @@ $cnt=1;
 if($query->rowCount() > 0)
 {
 foreach($results as $resultt)
-{   ?>                                            
-<option value="<?php echo htmlentities($resultt->DepartmentName);?>"><?php echo htmlentities($resultt->DepartmentName);?></option>
-<?php }} ?>
-</select>
-</div>
+{   ?>
+                                                            <option
+                                                                value="<?php echo htmlentities($resultt->DepartmentName);?>">
+                                                                <?php echo htmlentities($resultt->DepartmentName);?>
+                                                            </option>
+                                                            <?php }} ?>
+                                                        </select>
+                                                    </div>
 
                                                     <div class="input-field col m6 s12">
                                                         <label for="address">Address</label>
